@@ -19,10 +19,10 @@ export default function Header({ user, toggle, logout, open, toggleRef }) {
       >
         <Menu size={24}/>
       </button>
-      <b className="header-brand"></b>
+      <b className="header-brand">Info Panel</b>
       <ThemeSwitch/>
       <div className="header-person">
-        <strong>{user.name}</strong>
+        <strong title={user.name}>{user.name}</strong>
         <small>{user.role}</small>
       </div>
       <button
@@ -35,7 +35,7 @@ export default function Header({ user, toggle, logout, open, toggleRef }) {
           }
         }}
       >
-        <LogOut size={15}/> Sign out
+        <LogOut size={16}/><span className="signout-label">Sign out</span>
       </button>
     </header>
   );

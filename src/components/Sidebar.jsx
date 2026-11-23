@@ -66,7 +66,7 @@ export default function Sidebar({
         id="workspace-sidebar"
         hidden={mobile && !open}
         className={`${
-          open ? "expanded" : "compact"
+          mobile ? "expanded mobile-drawer" : (open ? "expanded" : "compact")
         } !bg-[#172d40] !px-2 !text-slate-100`}
       >
         <div
